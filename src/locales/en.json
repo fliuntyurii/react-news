@@ -1,0 +1,28 @@
+{
+  "header": {
+    "home": "Home",
+    "news": "News",
+    "profile": "Profile",
+    "login": "Login"
+  },
+  "home": {
+    "welcome": "Welcome to My App",
+    "title": "This is the home page of our app. Use the navigation links above to explore the other pages.",
+    "paragraph1": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec auctor posuere purus, eget commodo lectus pharetra quis. Sed iaculis ultricies nisl, non eleifend enim tristique non. Sed non leo non libero rutrum semper sed vel arcu. Sed ullamcorper fringilla augue, ac dictum metus tempus nec. Fusce vel commodo odio. Donec convallis luctus nisi vitae interdum.",
+    "paragraph2": "Sed quis lacus mi. Etiam quis mauris sapien. Aliquam porttitor justo lorem, ac varius massa feugiat sit amet. Fusce feugiat ante at ante feugiat, nec fermentum neque varius. Nulla eget nisl quam. Vestibulum a risus nec dui venenatis bibendum. Suspendisse blandit, elit sit amet bibendum egestas, augue nulla fermentum felis, ut fringilla ipsum tellus et sapien. Sed egestas nec ex vel consectetur. Nulla eget interdum arcu, ut congue urna. Aenean iaculis, tortor at ullamcorper commodo, lacus leo ultricies ex, ut commodo sapien velit vel massa."
+  },
+  "login": {
+    "user": "Username",
+    "password": "Password",
+    "login": "Login"
+  },
+  "profile": {
+    "bioTitle": "Bio",
+    "bioText": "Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo."
+  },
+  "news": {
+    "title": "Latest News",
+    "del": "Delete",
+    "load": "Load More"
+  }
+}
