@@ -15,10 +15,10 @@ export const App = () => {
       <BrowserRouter>
         <Header isLoggedIn={isLoggedIn} />
         <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/news" element={<News />} />
-          <Route path="/login" element={<Login />} />
-          <Route path="/profile" element={isLoggedIn ? <Profile /> : <Navigate to="/" />} />
+          <Route path="/react-news" element={<Home />} />
+          <Route path="/react-news/news" element={<News />} />
+          <Route path="/react-news/login" element={<Login />} />
+          <Route path="/react-news/profile" element={isLoggedIn ? <Profile /> : <Navigate to="/react-news" />} />
         </Routes>
       </BrowserRouter>
     </div>
