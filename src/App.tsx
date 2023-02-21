@@ -1,14 +1,16 @@
 import { Route, BrowserRouter, Routes, Navigate } from 'react-router-dom';
+import { useSelector } from 'react-redux';
 
 import Header from './components/Header/Header';
 import Home from './components/Home/Home';
 import Login from './components/Login/Login';
 import News from './components/News/News';
 import Profile from './components/Profile/Profile';
+import { RootState } from './store/store';
 import './App.css';
 
 export const App = () => {
-  const isLoggedIn = localStorage.getItem('auth') === 'true';
+  const isLoggedIn = useSelector((state: RootState) => state.auth.isLoggedIn);
 
   return (
     <div className='app'>

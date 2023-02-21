@@ -1,7 +1,7 @@
 import { Button, TextField } from '@mui/material';
 import { useState } from "react";
 import { useDispatch } from "react-redux";
-import { useNavigate } from 'react-router-dom';
+import { Navigate } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 
 import { LOGIN_SUCCESS } from '../../constants/actions';
@@ -9,11 +9,11 @@ import { login } from "../../store/authReducer";
 import styles from "./Login.module.css";
 
 export default function Login() {
-  const [username, setUsername] = useState("");
-  const [password, setPassword] = useState("");
-  const [isSuccess, setIsSuccess] = useState(true);
+  const [username, setUsername] = useState<string>("");
+  const [password, setPassword] = useState<string>("");
+  const [isSuccess, setIsSuccess] = useState<boolean>(false);
+  const [isError, setIsError] = useState<boolean>(false);
   const dispatch = useDispatch();
-  const navigate = useNavigate();
   const { t } = useTranslation();
 
   const handleUsernameChange = (event: React.ChangeEvent<HTMLInputElement>) => {
@@ -32,11 +32,10 @@ export default function Login() {
         setUsername("");
         setPassword("");
         setIsSuccess(true);
-        navigate('/profile');
         return;
       }
     });
-    setIsSuccess(false);
+    setIsError(true);
   };
 
   return (
@@ -55,11 +54,12 @@ export default function Login() {
           value={password}
           onChange={handlePasswordChange}
         />
-        { !isSuccess && username && password && <p className={styles.error}>Something went wrong!</p> }
+        { isError && username && password && <p className={styles.error}>Something went wrong!</p> }
         <Button type="submit" variant="contained" color="primary">
           {t("login.login")}
         </Button>
       </form>
+      { isSuccess && <Navigate to="/react-news/profile" /> }
     </div>
   );
 }
