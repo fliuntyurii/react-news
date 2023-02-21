@@ -24,13 +24,13 @@ function Header({ isLoggedIn }: Props) {
     <Suspense fallback="Loading...">
       <AppBar position="static">
         <Toolbar>
-          <Button onClick={() => navigate('/')} color="inherit">
+          <Button onClick={() => navigate('/react-news')} color="inherit">
             {t("header.home")}
           </Button>
-          <Button onClick={() => navigate('/news')} color="inherit">
+          <Button onClick={() => navigate('/react-news/news')} color="inherit">
             {t("header.news")}
           </Button> 
-          <Button onClick={() => navigate(`/${ isLoggedIn ? 'profile' : 'login' }`)} color="inherit">
+          <Button onClick={() => navigate(`/${ isLoggedIn ? '/react-news/profile' : '/react-news/login' }`)} color="inherit">
             { isLoggedIn ? t("header.profile") : t("header.login") }
           </Button>
           <Select
